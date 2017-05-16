@@ -318,7 +318,6 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; }
 .content.main .zoom-gallery figure:after { content: ""; display: block; background: url(../images/cross.svg); width: 15px; height: 15px; background-size: 15px 15px; position: absolute; right: 6px; top: 6px; opacity: 0.3; -webkit-transition: opacity 150ms ease; transition: opacity 150ms ease; }
 .content.main .zoom-gallery figure:hover:after { opacity: 1; }
 .content.main .zoom-gallery figure:hover .caption { background-color: rgba(0, 0, 0, 0.6); }
-.content.main .zoom-gallery a { outline: none; }
 .content.main .section { background-color: #000; height: 100%; width: 100%; }
 .content.main .section .title { padding: 0 20px; }
 .content.main .section .title img { -moz-user-select: -moz-none; -webkit-user-select: none; -o-user-select: none; -ms-user-select: none; user-select: none; }
@@ -333,10 +332,10 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; }
 .slick-slide, .slick-arrow, button { outline: none; }
 .slick-slide:focus, .slick-slide:active, .slick-arrow:focus, .slick-arrow:active, button:focus, button:active { outline: none; }
 
-.slick-dots { position: absolute; top: 0%; left: 0; right: 0; text-align: center; }
+.slick-dots { position: absolute; bottom: -50px; left: 0; right: 0; text-align: center; }
 .slick-dots li { outline: none; cursor: pointer; display: inline-block !important; margin: 0 7px !important; width: 12px; margin-left: auto; margin-right: auto; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; position: relative; }
-.slick-dots li button { border-radius: 50%; border-radius: 50%; width: 14px; height: 14px; background-color: #fff; overflow: hidden; }
-.slick-dots li:hover button, .slick-dots li.slick-active button { background-color: #000; }
+.slick-dots li button { text-indent: -999em; border-radius: 50%; border-radius: 50%; width: 14px; height: 14px; background-color: #fff; overflow: hidden; cursor: pointer; }
+.slick-dots li:hover button, .slick-dots li.slick-active button { background-color: #555; color: #555; }
 
 .slick-arrow { position: absolute; top: 50%; bottom: 0; text-align: center; margin-top: -20px; width: 40px; height: 40px; z-index: 100; opacity: 1; -webkit-transition: opacity 300ms ease-in-out; transition: opacity 300ms ease-in-out; cursor: pointer; }
 .slick-arrow:hover { opacity: 1; }

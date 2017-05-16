@@ -102,6 +102,7 @@ var isMobile;
 			// homepage
 
 			// $('.section').slice(1).fadeOut();
+            $('.section').eq(0).find('.slider figure:first').focus();
 
 			$('#projectMenu').on('click', function(){
 				$('nav.main .menu-toggle').trigger('click');
@@ -129,7 +130,8 @@ var isMobile;
 					// fadeout the next one in order to be able to fade it in
 					$('.section').eq(nextIndex ).find('.container').fadeOut(700, 'easeInQuart');
 
-
+                    $('.section').eq(index).find('.slider').focus();
+                    
 					// //reaching our last section? The one with our normal site?
 					// if(nextIndex == 1){
 					// 	//fading out the to arrow

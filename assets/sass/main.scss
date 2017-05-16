@@ -274,7 +274,7 @@ header.main {
 			}
 		}
 		a {
-			outline: none;
+			// outline: none;
 		}
 	}
 
@@ -329,7 +329,7 @@ header.main {
 }
 .slick-dots {
 	position: absolute;
-	top: 0%;
+	bottom: -50px;
 	left: 0;
 	right: 0;
 	text-align: center;
@@ -345,17 +345,19 @@ header.main {
 		position: relative;
 
 		button {
-			// text-indent: -999em;
+			text-indent: -999em;
 			border-radius: 50%;
 			border-radius: 50%;
 			width: 14px;
 			height: 14px;
 			background-color: #fff;
 			overflow: hidden;
+			cursor: pointer;
 		}
 		&:hover, &.slick-active {
 			button {
-				background-color: #000;
+				background-color: #555;
+				color: #555;
 			}
 		}
 	}
