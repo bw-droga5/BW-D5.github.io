@@ -1,0 +1,79 @@
+// In `sass/main.scss`
+@import 'mixin';
+@import 'sanitize';
+@import 'pagepiling';
+
+// variables
+$font-title: Arial, sans-serif; 
+$font-copy: Arial, sans-serif;
+
+$black: #231f20;
+$white: #fff;
+$pink: #d8b3c4;
+
+html, body { height: 100%; margin: 0; padding: 0; }
+
+/* ==========================================================================
+	 Author's custom styles
+	 ========================================================================== */
+header.main {
+	position: fixed;
+	top: 30px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	z-index: 200;
+}
+
+.content.main {
+	padding: 0;
+	margin: 0 auto;
+	color: #fff;
+	@include font-size(12px);
+	line-height: 1.5;
+	font-family: $font-copy;
+	font-weight: 400;
+	font-weight: normal;
+	text-align: center;
+	height: 100%;
+	strong {
+		font-weight: 600;
+	}
+
+	h1,h2,h3,h4 {
+		text-transform: uppercase;
+		line-height: 100%;
+		margin: 0;
+		font-weight: bold;
+	}
+	a {
+		text-decoration: none;
+	}
+	p {
+		margin: 0;
+	}
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+
+	
+	nav.main {
+	}
+	section {
+		text-align: center;
+		position: relative;
+		
+	}
+
+	.section {
+		background-color: #000;
+		height: 100%;
+		width: 100%;
+
+		.container {
+			padding-top: 200px;
+		}
+	}
+}
