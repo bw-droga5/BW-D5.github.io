@@ -4,6 +4,7 @@
 @import 'pagepiling';
 @import 'burger';
 @import 'magnific-popup';
+@import 'slick';
 
 // variables
 $font-title: Arial, sans-serif; 
@@ -13,14 +14,14 @@ $black: #231f20;
 $white: #fff;
 $pink: #d8b3c4;
 
-html, body { height: 100%; margin: 0; padding: 0; }
+html, body { height: 100%; margin: 0; padding: 0; background-color: #000; }
 
 /* ==========================================================================
 	 Author's custom styles
 	 ========================================================================== */
 header.main {
 	position: fixed;
-	top: 30px;
+	top: 28px;
 	left: 0;
 	right: 0;
 	width: 100%;
@@ -223,9 +224,30 @@ header.main {
 
 		figure {
 			display: inline-block;
-			margin: 0 2px;
-			width: 15%;
+			margin: 2px;
+			width: 100%;
+			width: 45%;
 			position: relative;
+			@include bp-tablet {
+				width: 16%;
+			}
+			.caption {
+				z-index: 10;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				top: 0;
+				text-transform: uppercase;
+				// text-align: left;
+				background-color: rgba(0,0,0,0.5);
+				transition: all 150ms ease;
+				p {
+					// text-align: left;
+					padding: 10px;
+					color: #fff;
+				}
+			}
 			img {
 				display: block;
 			}
@@ -245,6 +267,9 @@ header.main {
 			&:hover {
 				&:after {
 					opacity: 1;
+				}
+				.caption {
+					background-color: rgba(0,0,0,0.6);
 				}
 			}
 		}
@@ -271,6 +296,128 @@ header.main {
 
 		.container {
 			padding-top: 30vh;
+
+			&.image {
+				padding-top: 0;
+				img {
+					max-height: 90vh;
+				}
+			}
+		}
+
+		.slider {
+			margin-left: auto;
+			margin-right: auto;
+			width: 400px;
+
+			.caption {
+				display: none;
+			}
+		}
+	}
+}
+
+.mfp-counter {
+	display: none;
+}
+
+.slick-slide, .slick-arrow, button {
+	outline: none;
+	&:focus, &:active {
+		outline: none;
+	}
+}
+.slick-dots {
+	position: absolute;
+	top: 0%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	li {
+		outline: none;
+		cursor: pointer;
+		display: inline-block !important;
+		margin: 0 7px !important;
+		width: 12px;
+		margin-left: auto;
+		margin-right: auto;
+		transition: all 100ms ease-in-out;
+		position: relative;
+
+		button {
+			// text-indent: -999em;
+			border-radius: 50%;
+			border-radius: 50%;
+			width: 14px;
+			height: 14px;
+			background-color: #fff;
+			overflow: hidden;
+		}
+		&:hover, &.slick-active {
+			button {
+				background-color: #000;
+			}
+		}
+	}
+}
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	bottom: 0;
+	text-align: center;
+	margin-top: -20px;
+	width: 40px;
+	height: 40px;
+	z-index: 100;
+	opacity: 1;
+	transition: opacity 300ms ease-in-out;
+	cursor: pointer;
+	&:hover {
+		opacity: 1;
+	}
+	&.slick-prev, &.slick-next {
+		background-repeat: no-repeat;
+		padding-top: 8px;
+		padding-right: 2px;
+		font-size: 80%;
+		span {
+			position: relative;
+		}
+		// @extend .icon-octogon;
+		i {
+			position: relative;
+			z-index: 10;
+			font-size: 150%;
+			display: block;
+			top: -7px;
+		}
+		&:after {
+			font-size: 250%;
+			color: white;
+			position: absolute;
+			top: 0;	
+			left: 0;
+			z-index: 5;
+		}
+		&:hover {
+			i {
+				color: #fff;
+			}
+			&:after {
+				color: #fff;
+			}
+		}
+	}
+	&.slick-prev {
+		left: -40px;
+		@include bp-desktop {
+			left: -60px;
+		}
+	}
+	&.slick-next {
+		right: -40px;
+		@include bp-desktop {
+			right: -60px;
 		}
 	}
 }
