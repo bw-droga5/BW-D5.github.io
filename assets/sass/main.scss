@@ -2,10 +2,12 @@
 @import 'mixin';
 @import 'sanitize';
 @import 'pagepiling';
+@import 'burger';
+@import 'magnific-popup';
 
 // variables
 $font-title: Arial, sans-serif; 
-$font-copy: Arial, sans-serif;
+$font-copy: Helvetica, Arial, sans-serif;
 
 $black: #231f20;
 $white: #fff;
@@ -23,7 +25,159 @@ header.main {
 	right: 0;
 	width: 100%;
 	text-align: center;
+	z-index: 300;
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: grayscale;
+
+	.logo {
+		max-width: 70%;
+		padding-left: 10%;
+		height: auto;
+		@include bp-mobile {
+			padding-left: 0;
+		}
+	}
+}
+
+.menu-toggle {
+	cursor: pointer;
+	width: 70px;
+	height: 50px;
+	float: left;
+	display: block;
+	padding: 16px 10px 15px 0;
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	z-index: 350;
+	@include bp-mobile {
+		top: 28px;
+		left: 30px;
+	}
+	div {
+		@include burger(23px, 2px, 7px, #fff);
+	}
+	&.is-active div {
+		@include burger-to-cross(#fff);
+	}
+}
+
+.menu-section {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	z-index: 200;
+	background-color: #000;
+	display: none;
+	&.is-open {
+		display: block;
+	}
+	
+	.menu-content {
+		padding-top: 100px;
+		@include bp-tablet {
+			padding-top: 14vh;
+		}
+	}
+	ul {
+		width: 60%;
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+		li {
+			display: block;
+			padding: 0;
+			margin: 0;
+			@include bp-tablet {
+				height: 50px;
+				position: absolute;
+				&.s1 {
+					top: 0;
+					left: calc(50% - 81px);
+				}
+				&.s2 {
+					top: 60px;
+					left: calc(75% - 81px);
+				}
+				&.s3 {
+					top: 145px;
+					left: calc(90% - 81px);
+				}
+				&.s4 {
+					top: 240px;
+					left: calc(90% - 81px);
+				}
+				&.s5 {
+					top: 310px;
+					left: calc(75% - 81px);
+				}
+				&.s6 {
+					top: 370px;
+					left: calc(50% - 81px);
+				}
+				&.s7 {
+					top: 310px;
+					left: calc(25% - 81px);
+				}
+				&.s8 {
+					top: 240px;
+					left: calc(10% - 81px);
+				}
+				&.s9 {
+					top: 145px;
+					left: calc(10% - 81px);
+				}
+				&.s10 {
+					top: 60px;
+					left: calc(25% - 81px);
+				}
+
+				&.active {
+					a {
+						background: url(../images/circle.png) no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+			&.active {
+				a {
+					text-decoration: underline;
+				}
+			}
+			a {
+				color: #fff;
+				display: block;
+				text-align: center;
+				font-size: 90%;
+				width: 50%;
+				float: left;
+				text-align: center;
+				@include bp-tablet {
+					width: 100%;
+					font-size: 100%;
+					width: 143px;
+					height: 106px;
+				}
+				span {
+					display: block;
+					@include bp-tablet {
+						padding-top: 35px;
+					}	
+				}
+
+				&:hover {
+					text-decoration: underline;
+					@include bp-tablet {
+						text-decoration: none;
+						background: url(../images/circle.png) no-repeat;
+						background-size: 100%;
+					}
+				}
+			}
+		}
+	}
 }
 
 .content.main {
@@ -58,13 +212,45 @@ header.main {
 		max-width: 100%;
 	}
 
-	
-	nav.main {
-	}
 	section {
 		text-align: center;
-		position: relative;
-		
+		position: relative;		
+	}
+
+	.zoom-gallery {
+		text-align: center;
+		padding-top: 10vh;
+
+		figure {
+			display: inline-block;
+			margin: 0 2px;
+			width: 15%;
+			position: relative;
+			img {
+				display: block;
+			}
+			&:after {
+				content: "";
+				display: block;
+				background: url(../images/cross.svg);
+				width: 15px;
+				height: 15px;
+				background-size: 15px 15px;
+				position: absolute;
+				right: 6px;
+				top: 6px;
+				opacity: 0.3;
+				transition: opacity 150ms ease;
+			}
+			&:hover {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+		a {
+			outline: none;
+		}
 	}
 
 	.section {
@@ -72,8 +258,19 @@ header.main {
 		height: 100%;
 		width: 100%;
 
+		.title {
+			padding: 0 20px;
+			img {
+				-moz-user-select: -moz-none;
+				-khtml-user-select: none;
+				-webkit-user-select: none;
+				-o-user-select: none;
+				user-select: none; 
+			}
+		}
+
 		.container {
-			padding-top: 200px;
+			padding-top: 30vh;
 		}
 	}
 }

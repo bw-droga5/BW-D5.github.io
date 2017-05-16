@@ -96,3 +96,52 @@
 		@content;
 	}
 }
+
+@mixin bp-desktop-large {
+	@media only screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin bp-desktop-menu {
+	@media only screen and (min-width: 1200px) {
+		@content;
+	}
+}
+
+@mixin bp-desktop {
+	@media only screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin bp-tablet-large {
+	@media only screen and (min-width: 900px) {
+		@content;
+	}
+}
+
+@mixin bp-tablet {
+	@media only screen and (min-width: 767px) {
+		@content;
+	}
+}
+
+@mixin bp-small-tablet {
+	@media only screen and (min-width: 700px) {
+		@content;
+	}
+}
+
+
+@mixin bp-mobile {
+	@media only screen and (min-width: 420px) {
+		@content;
+	}
+}
+
+@mixin bp-mobile-only {
+	@media only screen and (max-width: 699px) {
+		@content;
+	}
+}

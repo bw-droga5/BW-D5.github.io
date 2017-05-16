@@ -64,13 +64,12 @@ var isMobile;
 		 *
 		 */
 		toggleProjectNav: function (elt) {
-			$('nav.project-nav .menu').on('click', function(e){
+			$('nav.main .menu-toggle').on('click', function(e){
 				e.preventDefault();
 				e.stopPropagation();
-				$(this).parent().toggleClass('is-open');
-			});
-			$('nav.project-nav li a').on('click', function(e){
-				$('nav.project-nav .menu').trigger('click');
+
+				$(this).toggleClass('is-active');
+				$('.menu-section').toggleClass('is-open');
 			});
 		},
 		/**
@@ -80,24 +79,31 @@ var isMobile;
 		pagepiling: function (elt) {
 			// homepage
 
-			$('.arrow-up').hide();
+			$('#projectMenu').on('click', function(){
+				$('nav.main .menu-toggle').trigger('click');
+			});
+
 			$('#content').pagepiling({
 				verticalCentered:false,
-				// anchors: ['hello', 'makeupstudio', 'parkassist', 'fendi', 'wowebsite', 'madmax'],
-				// menu: '#projectMenu',
+				menu: '#projectMenu',
+				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
 				navigation: false,
 				sectionSelector: '.section',
 				// sectionsColor: ['#f1f6ff', '#f6f6f6', '#fff', '#fff', '#f6f6f6', '#fff'],
 				easing: "ease-in-out",
 				animateAnchor: true,
 				css3: true,
+				keyboardScrolling: false,
 				onLeave: function(index, nextIndex, direction){
-
+console.log('===  main.js [98] ===', );
 					//fading out the txt of the leaving section
-					// $('.featuredProject').eq(index -1).find('aside .content').fadeOut(700, 'easeInQuart');
+					$('.section').eq(index -1).find('.container').fadeOut(700, 'easeInQuart');
 
 					// //fading in the text of the destination (in case it was fadedOut)
-					// $('.featuredProject').eq(nextIndex -1).find('aside .content').fadeIn(700, 'easeInQuart');
+					$('.section').eq(nextIndex -1).find('.container').fadeIn(700, 'easeInQuart');
+					
+					// fadeout the next one in order to be able to fade it in
+					$('.section').eq(nextIndex ).find('.container').fadeOut(700, 'easeInQuart');
 
 
 					// //reaching our last section? The one with our normal site?
@@ -119,6 +125,27 @@ var isMobile;
 				},
 			});
 
+			$(document).keydown(function(e) {
+				switch(e.which) {
+					case 37: // left
+					break;
+
+					case 38: // up
+						$.fn.pagepiling.moveSectionUp();
+					break;
+
+					case 39: // right
+					break;
+
+					case 40: // down
+						$.fn.pagepiling.moveSectionDown();
+					break;
+
+					default: return; // exit this handler for other keys
+				}
+				e.preventDefault(); // prevent the default action (scroll / move caret)
+			});
+
 			// $('.arrow-down').on('click', function(e){
 			// 	e.preventDefault();
 			// 	e.stopPropagation();
@@ -135,7 +162,33 @@ var isMobile;
 		 *
 		 */
 		slideZoom: function (elt) {
-			
+			$('.zoom-gallery').each(function(){
+
+				$(this).magnificPopup({
+					delegate: 'a',
+					type: 'image',
+					closeOnContentClick: false,
+					closeBtnInside: true,
+					mainClass: 'mfp-with-zoom mfp-img-mobile',
+					image: {
+						verticalFit: true,
+						// titleSrc: function(item) {
+						// 	return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+						// }
+					},
+					gallery: {
+						enabled: true
+					},
+					zoom: {
+						enabled: true,
+						duration: 300, // don't foget to change the duration also in CSS
+						opener: function(element) {
+							return element.find('img');
+						}
+					}
+					
+				});
+			})
 		}
 	};
 
