@@ -279,8 +279,6 @@ header.main {
 			img {
 				display: block;
 			}
-
-			
 		}
 		.figure_bis {
 			display: none;
@@ -299,24 +297,6 @@ header.main {
 				width: 100%;
 				margin-left: 0;
 				padding-top: 0;
-			}
-
-
-			&.x4 {
-				// @include bp-tablet {
-				// 	width: 80%;
-				// 	margin-left: 20%;
-				// 	figure {
-				// 		max-width: 100%;
-				// 	}
-				// }
-			}
-			&.x3 {
-				// max-width: 90%;
-			}
-
-			.caption {
-				display: none;
 			}
 		}
 
