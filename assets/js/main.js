@@ -101,9 +101,6 @@ var isMobile;
 		pagepiling: function (elt) {
 			// homepage
 
-			// $('.section').slice(1).fadeOut();
-			// $('.section').eq(0).find('.slider figure:first').focus();
-
 			$('#projectMenu').on('click', function(){
 				$('nav.main .menu-toggle').trigger('click');
 			});
@@ -261,73 +258,83 @@ var isMobile;
 
 		slider: function (elt) {
 			if($('.slider').length > 0){
-				$('.slider').slick({
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					slide: 'figure',
-					prevArrow: '<span class="slick-prev"><i class="icon-arrow-left"></i></span>',
-					nextArrow: '<span class="slick-next"><i class="icon-arrow-right"></i></span>',
-					mobileFirst: true,
-					arrows: true,
-					dots: true,
-					// centerMode: true,
-					// centerPadding: '40px',
-					responsive: [
-						{
-							breakpoint: 767,
-							settings: "unslick"
-						},
-						{
-							breakpoint: 100,
-							settings: {
-								slidesToShow: 1,
-								slidesToScroll: 1,
-								arrows: false,
-								dots: true
-							}
-						}
-					]
-					// 		breakpoint: 767,
-					// 		settings: {
-					// 			slidesToShow: 1,
-					// 			slidesToScroll: 1,
-					// 			arrows: false,
-					// 			dots: true,
-					// 			centerMode: true,
-					// 			centerPadding: '25%'
-					// 		}
-					// 	},
-					// 	{
-					// 		breakpoint: 500,
-					// 		settings: {
-					// 			slidesToShow: 1,
-					// 			slidesToScroll: 1,
-					// 			arrows: false,
-					// 			dots: true,
-					// 			centerMode: true,
-					// 			centerPadding: '15%'
-					// 		}
-					// 	},
-					// 	{
-					// 		breakpoint: 100,
-					// 		settings: {
-					// 			slidesToShow: 1,
-					// 			slidesToScroll: 1,
-					// 			arrows: false,
-					// 			dots: true,
-					// 			centerMode: true,
-					// 			centerPadding: '8%'
-					// 		}
-					// 	}
-					// 	// You can unslick at a given breakpoint now by adding:
-					// 	// settings: "unslick"
-					// 	// instead of a settings object
-					// ]
-				});
 
+
+				if($(window).width() < 767) {
+
+
+					$('.slider').slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						slide: 'figure',
+						prevArrow: '<span class="slick-prev"><i class="icon-arrow-left"></i></span>',
+						nextArrow: '<span class="slick-next"><i class="icon-arrow-right"></i></span>',
+						mobileFirst: true,
+						arrows: true,
+						dots: true,
+						// centerMode: true,
+						// centerPadding: '40px',
+						responsive: [
+							{
+								breakpoint: 767,
+								settings: "unslick"
+							},
+							{
+								breakpoint: 100,
+								settings: {
+									slidesToShow: 1,
+									slidesToScroll: 1,
+									arrows: false,
+									dots: true
+								}
+							}
+						]
+						// 		breakpoint: 767,
+						// 		settings: {
+						// 			slidesToShow: 1,
+						// 			slidesToScroll: 1,
+						// 			arrows: false,
+						// 			dots: true,
+						// 			centerMode: true,
+						// 			centerPadding: '25%'
+						// 		}
+						// 	},
+						// 	{
+						// 		breakpoint: 500,
+						// 		settings: {
+						// 			slidesToShow: 1,
+						// 			slidesToScroll: 1,
+						// 			arrows: false,
+						// 			dots: true,
+						// 			centerMode: true,
+						// 			centerPadding: '15%'
+						// 		}
+						// 	},
+						// 	{
+						// 		breakpoint: 100,
+						// 		settings: {
+						// 			slidesToShow: 1,
+						// 			slidesToScroll: 1,
+						// 			arrows: false,
+						// 			dots: true,
+						// 			centerMode: true,
+						// 			centerPadding: '8%'
+						// 		}
+						// 	}
+						// 	// You can unslick at a given breakpoint now by adding:
+						// 	// settings: "unslick"
+						// 	// instead of a settings object
+						// ]
+					});
+				}
 
 				$(window).on('resize orientationchange', function() {
-					$('.js-slider').slick('resize');
+					if($(window).width() < 767) {
+						$('.slider').slick('resize');
+					}
+					else {
+						$('.slider').slick('unslick');
+					}
 				});
 			}
 		}

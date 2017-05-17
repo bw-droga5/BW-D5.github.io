@@ -217,7 +217,11 @@ header.main {
 		height: auto;
 		max-width: 100%;
 	}
-
+	hr {
+		display: block;
+		width: 100%;
+		clear: both;
+	}
 	section {
 		text-align: center;
 		position: relative;		
@@ -231,78 +235,92 @@ header.main {
 			margin-left: auto !important;
 			margin-right: auto !important;
 		}
-		
-		&.x4 {
-			@include bp-tablet {
-				width: 66%;
-			}
-		}
-		&.x3 {
-			// max-width: 90%;
-		}
 
 		figure {
-			display: block;
-			float: left;
+			display: inline-block;
+			// float: left;
 			width: 100%;
 			position: relative;
 			a {
 				position: relative;
 				display: block;
 				padding: 2px;
+				&:after {
+					content: "";
+					display: block;
+					background: url(../images/cross.svg);
+					width: 15px;
+					height: 15px;
+					background-size: 15px 15px;
+					position: absolute;
+					right: 6px;
+					top: 6px;
+					opacity: 0.3;
+					transition: opacity 150ms ease;
+				}
+				&:hover {
+					&:after {
+						opacity: 1;
+					}
+					.caption {
+						background-color: rgba(0,0,0,0.6);
+					}
+				}
 			}
 			@include bp-tablet {
-				&.clear {
-					clear: both;
-				}
 				width: 33%;
-			}
-			.caption {
-				z-index: 10;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				top: 0;
-				text-transform: uppercase;
-				// text-align: left;
-				background-color: rgba(0,0,0,0.5);
-				transition: all 150ms ease;
-				p {
-					// text-align: left;
-					padding: 10px;
-					color: #fff;
+				&.clear {
+					&:after {
+						display: block;
+					}
+					clear: both;
 				}
 			}
 			img {
 				display: block;
 			}
-			&:after {
-				content: "";
-				display: block;
-				background: url(../images/cross.svg);
-				width: 15px;
-				height: 15px;
-				background-size: 15px 15px;
-				position: absolute;
-				right: 6px;
-				top: 6px;
-				opacity: 0.3;
-				transition: opacity 150ms ease;
+
+			
+		}
+
+		&.slider {
+			margin-left: auto;
+			margin-right: auto;
+			width: 90%;
+			margin-left: 5%;
+
+			@include bp-tablet {
+				width: 100%;
+				margin-left: 0;
+				padding-top: 5vh;
 			}
-			&:hover {
-				&:after {
-					opacity: 1;
-				}
-				.caption {
-					background-color: rgba(0,0,0,0.6);
-				}
+
+
+			&.x4 {
+				// @include bp-tablet {
+				// 	width: 80%;
+				// 	margin-left: 20%;
+				// 	figure {
+				// 		max-width: 100%;
+				// 	}
+				// }
+			}
+			&.x3 {
+				// max-width: 90%;
+			}
+
+			.caption {
+				display: none;
 			}
 		}
-		a {
-			display: block;
-			// outline: none;
+
+		.x4 {
+			@include bp-tablet {
+				width: 50%;
+			}
 		}
+
+
 	}
 
 	.section {
@@ -312,6 +330,9 @@ header.main {
 
 		.title {
 			padding: 0 20px;
+			// position: absolute;
+			// top: 50px;
+			// width: 100%;
 			img {
 				-moz-user-select: -moz-none;
 				-khtml-user-select: none;
@@ -345,22 +366,7 @@ header.main {
 			}
 		}
 
-		.slider {
-			margin-left: auto;
-			margin-right: auto;
-			width: 90%;
-			margin-left: 5%;
-
-			@include bp-tablet {
-				width: 100%;
-				margin-left: 0;
-				padding-top: 5vh;
-			}
-
-			.caption {
-				display: none;
-			}
-		}
+		
 	}
 }
 
