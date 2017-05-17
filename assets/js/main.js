@@ -119,6 +119,10 @@ var isMobile;
 				animateAnchor: true,
 				css3: true,
 				keyboardScrolling: false,
+                navigation: {
+                    'position': 'left',
+                    'tooltips': ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6', 'Step 7', 'Step 8', 'Step 9', 'Step 10']
+                },
 				onLeave: function(index, nextIndex, direction){
 
 					//fading out the txt of the leaving section
@@ -228,10 +232,23 @@ var isMobile;
     				mobileFirst: true,
     				arrows: true,
     				dots: true,
-    				centerMode: true,
-    				centerPadding: '40px',
-    				// responsive: [
-    				// 	{
+    				// centerMode: true,
+    				// centerPadding: '40px',
+    				responsive: [
+    					{
+                            breakpoint: 767,
+                            settings: "unslick"
+                        },
+                        {
+                            breakpoint: 100,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                dots: true
+                            }
+                        }
+                    ]
     				// 		breakpoint: 767,
     				// 		settings: {
     				// 			slidesToShow: 1,

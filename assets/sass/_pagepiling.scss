@@ -94,16 +94,16 @@ html, body {
 }
 #pp-nav li .active span,
 .pp-slidesNav .active span {
-    background: #333;
+    background: #fff;
 }
 #pp-nav span,
 .pp-slidesNav span {
     top: 2px;
     left: 2px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
+    width: 10px;
+    height: 10px;
+    border: 1px solid #444;
+    background: #9d9d9c;
     border-radius: 50%;
     position: absolute;
     z-index: 1;
@@ -112,10 +112,12 @@ html, body {
     position: absolute;
     top: -2px;
     color: #fff;
-    font-size: 14px;
+    font-size: 11px;
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
     max-width: 220px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .pp-tooltip.right {
     right: 20px;

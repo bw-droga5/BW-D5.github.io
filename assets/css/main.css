@@ -96,11 +96,11 @@ html, body { overflow: hidden; margin: 0; padding: 0; /*Avoid flicker on slides 
 
 #pp-nav li a, .pp-slidesNav li a { display: block; position: relative; z-index: 1; width: 100%; height: 100%; cursor: pointer; text-decoration: none; }
 
-#pp-nav li .active span, .pp-slidesNav .active span { background: #333; }
+#pp-nav li .active span, .pp-slidesNav .active span { background: #fff; }
 
-#pp-nav span, .pp-slidesNav span { top: 2px; left: 2px; width: 8px; height: 8px; border: 1px solid #000; background: transparent; border-radius: 50%; position: absolute; z-index: 1; }
+#pp-nav span, .pp-slidesNav span { top: 2px; left: 2px; width: 10px; height: 10px; border: 1px solid #444; background: #9d9d9c; border-radius: 50%; position: absolute; z-index: 1; }
 
-.pp-tooltip { position: absolute; top: -2px; color: #fff; font-size: 14px; font-family: arial, helvetica, sans-serif; white-space: nowrap; max-width: 220px; }
+.pp-tooltip { position: absolute; top: -2px; color: #fff; font-size: 11px; font-family: arial, helvetica, sans-serif; white-space: nowrap; max-width: 220px; letter-spacing: 1px; text-transform: uppercase; }
 
 .pp-tooltip.right { right: 20px; }
 
@@ -261,11 +261,11 @@ html, body { height: 100%; margin: 0; padding: 0; background-color: #000; }
 	 Author's custom styles
 	 ========================================================================== */
 header.main { position: fixed; top: 28px; left: 0; right: 0; width: 100%; text-align: center; z-index: 300; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-header.main .logo { max-width: 70%; padding-left: 10%; height: auto; }
+header.main .logo { max-width: 70%; padding-left: 10%; height: auto; display: none; }
 @media only screen and (min-width: 420px) { header.main .logo { padding-left: 0; } }
 
 .menu-toggle { cursor: pointer; width: 70px; height: 50px; float: left; display: block; padding: 16px 10px 15px 0; position: fixed; top: 20px; left: 20px; z-index: 350; }
-@media only screen and (min-width: 420px) { .menu-toggle { top: 28px; left: 30px; } }
+@media only screen and (min-width: 420px) { .menu-toggle { top: 28px; left: 30px; display: none; } }
 .menu-toggle div { position: relative; margin-top: 9px; margin-bottom: 9px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 .menu-toggle div, .menu-toggle div::before, .menu-toggle div::after { display: block; width: 23px; height: 2px; background-color: #fff; outline: 1px solid transparent; -webkit-transition-property: background-color, -webkit-transform; transition-property: background-color, -webkit-transform; transition-property: background-color, transform; transition-property: background-color, transform, -webkit-transform; -webkit-transition-duration: 0.3s; transition-duration: 0.3s; }
 .menu-toggle div::before, .menu-toggle div::after { position: absolute; content: ""; }
@@ -295,6 +295,7 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; }
   .menu-section ul li.s10 { top: 60px; left: calc(25% - 81px); }
   .menu-section ul li.active a { background: url(../images/circle.png) no-repeat; background-size: 100%; } }
 .menu-section ul li.active a { text-decoration: underline; }
+@media only screen and (min-width: 767px) { .menu-section ul li.active a { text-decoration: none; } }
 .menu-section ul li a { color: #fff; display: block; text-align: center; font-size: 90%; width: 50%; float: left; text-align: center; }
 @media only screen and (min-width: 767px) { .menu-section ul li a { width: 100%; font-size: 100%; width: 143px; height: 106px; } }
 .menu-section ul li a span { display: block; }
@@ -309,32 +310,39 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; }
 .content.main p { margin: 0; }
 .content.main img { height: auto; max-width: 100%; }
 .content.main section { text-align: center; position: relative; }
-.content.main .zoom-gallery { text-align: center; padding-top: 10vh; }
-.content.main .zoom-gallery figure { display: inline-block; margin: 2px; width: 100%; width: 45%; position: relative; }
-@media only screen and (min-width: 767px) { .content.main .zoom-gallery figure { width: 16%; } }
+.content.main .zoom-gallery { text-align: center; padding-top: 5vh; max-width: 610px; margin-left: auto !important; margin-right: auto !important; }
+.content.main .zoom-gallery.x3 { max-width: 960px; }
+.content.main .zoom-gallery figure { display: inline-block; margin: 0px 2px; width: 100%; width: 45%; position: relative; }
+@media only screen and (min-width: 767px) { .content.main .zoom-gallery figure { width: 290px; } }
 .content.main .zoom-gallery figure .caption { z-index: 10; position: absolute; bottom: 0; left: 0; right: 0; top: 0; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.5); -webkit-transition: all 150ms ease; transition: all 150ms ease; }
 .content.main .zoom-gallery figure .caption p { padding: 10px; color: #fff; }
 .content.main .zoom-gallery figure img { display: block; }
 .content.main .zoom-gallery figure:after { content: ""; display: block; background: url(../images/cross.svg); width: 15px; height: 15px; background-size: 15px 15px; position: absolute; right: 6px; top: 6px; opacity: 0.3; -webkit-transition: opacity 150ms ease; transition: opacity 150ms ease; }
 .content.main .zoom-gallery figure:hover:after { opacity: 1; }
 .content.main .zoom-gallery figure:hover .caption { background-color: rgba(0, 0, 0, 0.6); }
+.content.main .zoom-gallery a { display: block; }
 .content.main .section { background-color: #000; height: 100%; width: 100%; }
 .content.main .section .title { padding: 0 20px; }
 .content.main .section .title img { -moz-user-select: -moz-none; -webkit-user-select: none; -o-user-select: none; -ms-user-select: none; user-select: none; }
-.content.main .section .container { padding-top: 30vh; }
+.content.main .section .container { display: table; width: 100%; height: 100%; }
 .content.main .section .container.image { padding-top: 0; }
 .content.main .section .container.image img { max-height: 90vh; }
-.content.main .section .slider { margin-left: auto; margin-right: auto; width: 400px; }
+.content.main .section .container_center { display: table-cell; vertical-align: middle; width: 100%; height: 100%; }
+.content.main .section .slider { margin-left: auto; margin-right: auto; width: 90%; margin-left: 5%; }
+@media only screen and (min-width: 767px) { .content.main .section .slider { padding-top: 100px; } }
 .content.main .section .slider .caption { display: none; }
 
 .mfp-counter { display: none; }
+
+#pp-nav { display: none; }
+@media only screen and (min-width: 767px) { #pp-nav { display: block; } }
 
 .slick-slide, .slick-arrow, button { outline: none; }
 .slick-slide:focus, .slick-slide:active, .slick-arrow:focus, .slick-arrow:active, button:focus, button:active { outline: none; }
 
 .slick-dots { position: absolute; bottom: -50px; left: 0; right: 0; text-align: center; }
-.slick-dots li { outline: none; cursor: pointer; display: inline-block !important; margin: 0 7px !important; width: 12px; margin-left: auto; margin-right: auto; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; position: relative; }
-.slick-dots li button { text-indent: -999em; border-radius: 50%; border-radius: 50%; width: 14px; height: 14px; background-color: #fff; overflow: hidden; cursor: pointer; }
+.slick-dots li { outline: none; cursor: pointer; display: inline-block !important; margin: 0 7px !important; width: 10px; margin-left: auto; margin-right: auto; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; position: relative; }
+.slick-dots li button { text-indent: -999em; border-radius: 50%; border-radius: 50%; width: 10px; height: 10px; background-color: #fff; overflow: hidden; cursor: pointer; }
 .slick-dots li:hover button, .slick-dots li.slick-active button { background-color: #555; color: #555; }
 
 .slick-arrow { position: absolute; top: 50%; bottom: 0; text-align: center; margin-top: -20px; width: 40px; height: 40px; z-index: 100; opacity: 1; -webkit-transition: opacity 300ms ease-in-out; transition: opacity 300ms ease-in-out; cursor: pointer; }

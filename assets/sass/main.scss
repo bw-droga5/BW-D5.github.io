@@ -34,6 +34,7 @@ header.main {
 		max-width: 70%;
 		padding-left: 10%;
 		height: auto;
+		display: none;
 		@include bp-mobile {
 			padding-left: 0;
 		}
@@ -54,6 +55,7 @@ header.main {
 	@include bp-mobile {
 		top: 28px;
 		left: 30px;
+		display: none;
 	}
 	div {
 		@include burger(23px, 2px, 7px, #fff);
@@ -145,6 +147,9 @@ header.main {
 			&.active {
 				a {
 					text-decoration: underline;
+					@include bp-tablet {
+						text-decoration: none;
+					}
 				}
 			}
 			a {
@@ -220,16 +225,23 @@ header.main {
 
 	.zoom-gallery {
 		text-align: center;
-		padding-top: 10vh;
+		padding-top: 5vh;
+		max-width: 610px;
+		margin-left: auto !important;
+		margin-right: auto !important;
+
+		&.x3 {
+			max-width: 960px;
+		}
 
 		figure {
 			display: inline-block;
-			margin: 2px;
+			margin: 0px 2px;
 			width: 100%;
 			width: 45%;
 			position: relative;
 			@include bp-tablet {
-				width: 16%;
+				width: 290px;
 			}
 			.caption {
 				z-index: 10;
@@ -274,6 +286,7 @@ header.main {
 			}
 		}
 		a {
+			display: block;
 			// outline: none;
 		}
 	}
@@ -295,8 +308,10 @@ header.main {
 		}
 
 		.container {
-			padding-top: 30vh;
-
+			// padding-top: 30vh;
+			display: table;
+			width: 100%;
+			height: 100%;
 			&.image {
 				padding-top: 0;
 				img {
@@ -304,11 +319,23 @@ header.main {
 				}
 			}
 		}
+		.container_center {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			height: 100%;
+		}
 
 		.slider {
 			margin-left: auto;
 			margin-right: auto;
-			width: 400px;
+			width: 90%;
+			margin-left: 5%;
+
+			@include bp-tablet {
+				// width: 600px;
+				padding-top: 100px;
+			}
 
 			.caption {
 				display: none;
@@ -317,9 +344,20 @@ header.main {
 	}
 }
 
+
+// lightbox
 .mfp-counter {
 	display: none;
 }
+
+// page pilling
+#pp-nav {
+	display: none;
+	@include bp-tablet {
+		display: block;
+	}
+}
+
 
 .slick-slide, .slick-arrow, button {
 	outline: none;
@@ -338,7 +376,7 @@ header.main {
 		cursor: pointer;
 		display: inline-block !important;
 		margin: 0 7px !important;
-		width: 12px;
+		width: 10px;
 		margin-left: auto;
 		margin-right: auto;
 		transition: all 100ms ease-in-out;
@@ -348,8 +386,8 @@ header.main {
 			text-indent: -999em;
 			border-radius: 50%;
 			border-radius: 50%;
-			width: 14px;
-			height: 14px;
+			width: 10px;
+			height: 10px;
 			background-color: #fff;
 			overflow: hidden;
 			cursor: pointer;
