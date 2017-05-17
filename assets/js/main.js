@@ -281,6 +281,7 @@ var isMobile;
 						mobileFirst: true,
 						arrows: true,
 						dots: true,
+						infinite: false,
 						// centerMode: true,
 						// centerPadding: '40px',
 						responsive: [
