@@ -320,6 +320,16 @@ header.main {
 			// top: 50px;
 			// width: 100%;
 			img {
+				max-width: 450px;
+				transition: all 150ms ease-in-out;
+				@include bp-desktop-large {
+					max-width: 550px;
+				}
+				@include bp-desktop-xlarge {
+					max-width: 779px;
+				}
+			}
+			img {
 				-moz-user-select: -moz-none;
 				-khtml-user-select: none;
 				-webkit-user-select: none;
