@@ -323,7 +323,7 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; display: no
   .content.main .zoom-gallery figure.clear:after, .content.main .zoom-gallery .figure_bis.clear:after { display: block; } }
 .content.main .zoom-gallery figure img, .content.main .zoom-gallery .figure_bis img { display: block; }
 .content.main .zoom-gallery.slider { margin-left: auto; margin-right: auto; width: 90%; margin-left: 5%; }
-@media only screen and (min-width: 767px) { .content.main .zoom-gallery.slider { width: 100%; margin-left: 0; padding-top: 5vh; } }
+@media only screen and (min-width: 767px) { .content.main .zoom-gallery.slider { width: 100%; margin-left: 0; padding-top: 0; } }
 .content.main .zoom-gallery.slider .caption { display: none; }
 @media only screen and (min-width: 767px) { .content.main .zoom-gallery .x4 { width: 50%; } }
 .content.main .section { background-color: #000; height: 100%; width: 100%; }
