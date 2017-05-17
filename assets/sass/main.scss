@@ -282,6 +282,12 @@ header.main {
 
 			
 		}
+		.figure_bis {
+			display: none;
+			@include bp-tablet {
+				display: block;
+			}
+		}
 
 		&.slider {
 			margin-left: auto;
