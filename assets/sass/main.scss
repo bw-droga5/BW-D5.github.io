@@ -226,22 +226,36 @@ header.main {
 	.zoom-gallery {
 		text-align: center;
 		padding-top: 5vh;
-		max-width: 610px;
-		margin-left: auto !important;
-		margin-right: auto !important;
-
+		max-width: 90%;
+		@include bp-tablet {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+		
+		&.x4 {
+			@include bp-tablet {
+				width: 66%;
+			}
+		}
 		&.x3 {
-			max-width: 960px;
+			// max-width: 90%;
 		}
 
 		figure {
-			display: inline-block;
-			margin: 0px 2px;
+			display: block;
+			float: left;
 			width: 100%;
-			width: 45%;
 			position: relative;
+			a {
+				position: relative;
+				display: block;
+				padding: 2px;
+			}
 			@include bp-tablet {
-				width: 290px;
+				&.clear {
+					clear: both;
+				}
+				width: 33%;
 			}
 			.caption {
 				z-index: 10;
@@ -308,10 +322,13 @@ header.main {
 		}
 
 		.container {
-			// padding-top: 30vh;
-			display: table;
+			padding-top: 10vh;
 			width: 100%;
 			height: 100%;
+			@include bp-tablet {
+				padding-top: 0;
+				display: table;
+			}
 			&.image {
 				padding-top: 0;
 				img {
@@ -320,10 +337,12 @@ header.main {
 			}
 		}
 		.container_center {
-			display: table-cell;
-			vertical-align: middle;
-			width: 100%;
-			height: 100%;
+			@include bp-tablet {
+				display: table-cell;
+				vertical-align: middle;
+				width: 100%;
+				height: 100%;
+			}
 		}
 
 		.slider {
@@ -333,8 +352,9 @@ header.main {
 			margin-left: 5%;
 
 			@include bp-tablet {
-				// width: 600px;
-				padding-top: 100px;
+				width: 100%;
+				margin-left: 0;
+				padding-top: 5vh;
 			}
 
 			.caption {
@@ -388,14 +408,14 @@ header.main {
 			border-radius: 50%;
 			width: 10px;
 			height: 10px;
-			background-color: #fff;
+			background-color: #9d9d9c;
 			overflow: hidden;
 			cursor: pointer;
 		}
 		&:hover, &.slick-active {
 			button {
-				background-color: #555;
-				color: #555;
+				background-color: #fff;
+				color: #fff;
 			}
 		}
 	}

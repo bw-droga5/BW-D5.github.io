@@ -310,10 +310,13 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; display: no
 .content.main p { margin: 0; }
 .content.main img { height: auto; max-width: 100%; }
 .content.main section { text-align: center; position: relative; }
-.content.main .zoom-gallery { text-align: center; padding-top: 5vh; max-width: 610px; margin-left: auto !important; margin-right: auto !important; }
-.content.main .zoom-gallery.x3 { max-width: 960px; }
-.content.main .zoom-gallery figure { display: inline-block; margin: 0px 2px; width: 100%; width: 45%; position: relative; }
-@media only screen and (min-width: 767px) { .content.main .zoom-gallery figure { width: 290px; } }
+.content.main .zoom-gallery { text-align: center; padding-top: 5vh; max-width: 90%; }
+@media only screen and (min-width: 767px) { .content.main .zoom-gallery { margin-left: auto !important; margin-right: auto !important; } }
+@media only screen and (min-width: 767px) { .content.main .zoom-gallery.x4 { width: 66%; } }
+.content.main .zoom-gallery figure { display: block; float: left; width: 100%; position: relative; }
+.content.main .zoom-gallery figure a { position: relative; display: block; padding: 2px; }
+@media only screen and (min-width: 767px) { .content.main .zoom-gallery figure { width: 33%; }
+  .content.main .zoom-gallery figure.clear { clear: both; } }
 .content.main .zoom-gallery figure .caption { z-index: 10; position: absolute; bottom: 0; left: 0; right: 0; top: 0; text-transform: uppercase; background-color: rgba(0, 0, 0, 0.5); -webkit-transition: all 150ms ease; transition: all 150ms ease; }
 .content.main .zoom-gallery figure .caption p { padding: 10px; color: #fff; }
 .content.main .zoom-gallery figure img { display: block; }
@@ -324,12 +327,13 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; display: no
 .content.main .section { background-color: #000; height: 100%; width: 100%; }
 .content.main .section .title { padding: 0 20px; }
 .content.main .section .title img { -moz-user-select: -moz-none; -webkit-user-select: none; -o-user-select: none; -ms-user-select: none; user-select: none; }
-.content.main .section .container { display: table; width: 100%; height: 100%; }
+.content.main .section .container { padding-top: 10vh; width: 100%; height: 100%; }
+@media only screen and (min-width: 767px) { .content.main .section .container { padding-top: 0; display: table; } }
 .content.main .section .container.image { padding-top: 0; }
 .content.main .section .container.image img { max-height: 90vh; }
-.content.main .section .container_center { display: table-cell; vertical-align: middle; width: 100%; height: 100%; }
+@media only screen and (min-width: 767px) { .content.main .section .container_center { display: table-cell; vertical-align: middle; width: 100%; height: 100%; } }
 .content.main .section .slider { margin-left: auto; margin-right: auto; width: 90%; margin-left: 5%; }
-@media only screen and (min-width: 767px) { .content.main .section .slider { padding-top: 100px; } }
+@media only screen and (min-width: 767px) { .content.main .section .slider { width: 100%; margin-left: 0; padding-top: 5vh; } }
 .content.main .section .slider .caption { display: none; }
 
 .mfp-counter { display: none; }
@@ -342,8 +346,8 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; display: no
 
 .slick-dots { position: absolute; bottom: -50px; left: 0; right: 0; text-align: center; }
 .slick-dots li { outline: none; cursor: pointer; display: inline-block !important; margin: 0 7px !important; width: 10px; margin-left: auto; margin-right: auto; -webkit-transition: all 100ms ease-in-out; transition: all 100ms ease-in-out; position: relative; }
-.slick-dots li button { text-indent: -999em; border-radius: 50%; border-radius: 50%; width: 10px; height: 10px; background-color: #fff; overflow: hidden; cursor: pointer; }
-.slick-dots li:hover button, .slick-dots li.slick-active button { background-color: #555; color: #555; }
+.slick-dots li button { text-indent: -999em; border-radius: 50%; border-radius: 50%; width: 10px; height: 10px; background-color: #9d9d9c; overflow: hidden; cursor: pointer; }
+.slick-dots li:hover button, .slick-dots li.slick-active button { background-color: #fff; color: #fff; }
 
 .slick-arrow { position: absolute; top: 50%; bottom: 0; text-align: center; margin-top: -20px; width: 40px; height: 40px; z-index: 100; opacity: 1; -webkit-transition: opacity 300ms ease-in-out; transition: opacity 300ms ease-in-out; cursor: pointer; }
 .slick-arrow:hover { opacity: 1; }
