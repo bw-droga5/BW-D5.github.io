@@ -52,7 +52,7 @@ header.main {
 	top: 20px;
 	left: 20px;
 	z-index: 350;
-	@include bp-mobile {
+	@include bp-tablet {
 		top: 28px;
 		left: 30px;
 		display: none;
@@ -330,6 +330,19 @@ header.main {
 				}
 				@include bp-desktop-xlarge {
 					max-width: 779px;
+				}
+			}
+			&.intro {
+				img {
+					@include bp-tablet {
+						max-width: 779px;
+					}
+					@include bp-desktop-large {
+						max-width: 779px;
+					}
+					@include bp-desktop-xlarge {
+						max-width: 779px;
+					}
 				}
 			}
 			img {
