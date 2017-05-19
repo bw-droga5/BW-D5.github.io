@@ -114,7 +114,7 @@ var isMobile;
 			$('#content').pagepiling({
 				verticalCentered:false,
 				menu: '#projectMenu',
-				anchors: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10'],
+				anchors: ['intro', 'step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10', 'video'],
 				navigation: false,
 				sectionSelector: '.section',
 				// sectionsColor: ['#f1f6ff', '#f6f6f6', '#fff', '#fff', '#f6f6f6', '#fff'],
@@ -124,7 +124,7 @@ var isMobile;
 				keyboardScrolling: false,
 				navigation: {
 					'position': 'left',
-					'tooltips': ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6', 'Step 7', 'Step 8', 'Step 9', 'Step 10']
+					'tooltips': ['Intro', 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6', 'Step 7', 'Step 8', 'Step 9', 'Step 10', 'video']
 				},
 				onLeave: function(index, nextIndex, direction){
 
@@ -345,11 +345,14 @@ var isMobile;
 				}
 
 				$(window).on('resize orientationchange', function() {
+					console.log('===  main.js [348] ===', $(window).width());
 					if($(window).width() < 767) {
-						$('.slider').slick('resize');
+						$('.slider').each(function(){
+							$(this).slick('resize');
+						});
 					}
 					else {
-						$('.slider').slick('unslick');
+						// $('.slider').slick('unslick');
 					}
 				});
 			}
