@@ -79,7 +79,7 @@ var isMobile;
 			this.toggleProjectNav();
 			this.slider();
 
-			
+
 			FastClick.attach(document.body);
 
 			// initiate as false
@@ -114,7 +114,7 @@ var isMobile;
 			$('#content').pagepiling({
 				verticalCentered:false,
 				menu: '#projectMenu',
-				anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
+				anchors: ['step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10'],
 				navigation: false,
 				sectionSelector: '.section',
 				// sectionsColor: ['#f1f6ff', '#f6f6f6', '#fff', '#fff', '#f6f6f6', '#fff'],
