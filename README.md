@@ -2,4 +2,13 @@
 
 Slider presentation for the Bowers Wilkins and You
 
-Password protected
+------
+Javascript password protection to view all the content.
+
+
+
+Developer: Denis Bouquet <den.bouquet@gmail.com>
+
+Project manager:
+Beatrice Cote <bcote@droga5.co.uk>
+Callum Raines <craines@droga5.co.uk>
