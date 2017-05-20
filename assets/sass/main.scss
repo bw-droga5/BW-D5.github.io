@@ -257,7 +257,7 @@ header.main {
 						position: absolute;
 						top: 6px;
 						left: 6px;
-						opacity: 1;
+						opacity: 0.3;
 						transition: opacity 150ms ease;
 					}
 				}
@@ -280,7 +280,7 @@ header.main {
 					transition: opacity 150ms ease;
 				}
 				&:hover {
-					&:after {
+					&:before, &:after {
 						opacity: 1;
 					}
 					.caption {
