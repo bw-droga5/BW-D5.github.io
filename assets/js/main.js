@@ -423,7 +423,7 @@ var droga5 = "AbbeyRD1966";
 						src: 'assets/images/high-res/s7_1.jpeg'
 					},
 					{
-						src: 'iframe-player.html',
+						src: 'flow.html',
 						type: 'iframe' // this overrides default type
 					}
 				],
