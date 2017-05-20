@@ -423,7 +423,7 @@ var droga5 = "AbbeyRD1966";
 						src: 'assets/images/high-res/s7_1.jpeg'
 					},
 					{
-						src: 'https://flowcreative.co.nf/index.html',
+						src: 'iframe-player.html',
 						type: 'iframe' // this overrides default type
 					}
 				],
