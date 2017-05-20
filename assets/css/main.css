@@ -301,7 +301,7 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; display: no
 .menu-section ul li a:hover { text-decoration: underline; }
 @media only screen and (min-width: 767px) { .menu-section ul li a:hover { text-decoration: none; background: url(../images/circle.png) no-repeat; background-size: 100%; } }
 
-.content.main { padding: 0; margin: 0 auto; color: #fff; font-size: 12px; font-size: 0.75rem; line-height: 1.5; font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-weight: normal; text-align: center; height: 100%; }
+.content.main { -webkit-transition: opacity 300ms ease-in-out; transition: opacity 300ms ease-in-out; padding: 0; margin: 0 auto; color: #fff; font-size: 12px; font-size: 0.75rem; line-height: 1.5; font-family: Helvetica, Arial, sans-serif; font-weight: 400; font-weight: normal; text-align: center; height: 100%; }
 .content.main.opa { opacity: 0; }
 .content.main strong { font-weight: 600; }
 .content.main h1, .content.main h2, .content.main h3, .content.main h4 { text-transform: uppercase; line-height: 100%; margin: 0; font-weight: bold; }
