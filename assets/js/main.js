@@ -62,6 +62,8 @@ var popup_open = false;
 // Site js object
 var Site;
 var isMobile; 
+var droga5 = "AbbeyRD1966";
+
 (function ($) {
 	'use strict'; 
 	
@@ -78,6 +80,7 @@ var isMobile;
 			this.slideZoom();
 			this.toggleProjectNav();
 			this.slider();
+			this.loginform();
 
 
 			FastClick.attach(document.body);
@@ -98,6 +101,30 @@ var isMobile;
 
 				$(this).toggleClass('is-active');
 				$('.menu-section').toggleClass('is-open');
+			});
+		},
+		/**
+		 * Login 
+		 *
+		 */
+		loginform: function (elt) {
+			$('#loginform').on('submit', function(e){
+				e.preventDefault();
+				e.stopPropagation();
+
+				if($('#login').val() == droga5) {
+					$('aside').hide();
+					$('#content').toggleClass('opa');
+
+				}
+				else {
+					$('#login').addClass('error');
+					$('#login').focus();
+				}
+			});
+
+			$(document).on('change', '#login', function() {
+				$(this).removeClass('error');
 			});
 		},
 		/**
@@ -241,10 +268,10 @@ var isMobile;
 								// if index is not last, call parent method
 								if(mfp.index < mfp.items.length - 1) {
 									proto.next.call(mfp);
-								   $('.mfp-arrow-right').show();
+									 $('.mfp-arrow-right').show();
 								} else {
-								   // otherwise do whatever you want, e.g. hide "next" arrow
-								   $('.mfp-arrow-right').hide();
+									 // otherwise do whatever you want, e.g. hide "next" arrow
+									 $('.mfp-arrow-right').hide();
 								}
 							};
 
@@ -268,7 +295,186 @@ var isMobile;
 					}
 					
 				});
-			})
+			});
+
+			$('.zoom-gallery-6-1').magnificPopup({
+				items: [
+					{
+						src: 'assets/images/high-res/s6_1.jpeg'
+					},
+					{
+						src: 'assets/images/high-res/s6_1_1.jpg'
+					},
+					{
+						src: 'assets/images/high-res/s6_1_2.jpg'
+					}
+				],
+				gallery: {
+					enabled: true
+				},
+				type: 'image',
+				callbacks: {
+					open: function() {
+						var mfp = $.magnificPopup.instance;
+						var proto = $.magnificPopup.proto;
+
+						popup_open = true;
+
+						// default hide the left one
+						$('.mfp-arrow-left').hide();
+
+						// extend function that moves to next item
+						mfp.next = function() {
+							$('.mfp-arrow-right').show();
+							$('.mfp-arrow-left').show();
+
+							// if index is not last, call parent method
+							if(mfp.index < mfp.items.length - 1) {
+								proto.next.call(mfp);
+								 $('.mfp-arrow-right').show();
+							} else {
+								 // otherwise do whatever you want, e.g. hide "next" arrow
+								 $('.mfp-arrow-right').hide();
+							}
+						};
+
+						// same with prev method
+						mfp.prev = function() {
+							$('.mfp-arrow-right').show();
+							$('.mfp-arrow-left').show();
+							if(mfp.index > 0) {
+								proto.prev.call(mfp);
+								$('.mfp-arrow-left').show();
+							}
+							else {
+								$('.mfp-arrow-left').hide();
+							}
+						};
+
+					},
+					close: function() {
+						popup_open = false;
+					}
+				}
+			});
+
+			$('.zoom-gallery-6-2').magnificPopup({
+				items: [
+					{
+						src: 'assets/images/high-res/s6_3.jpeg'
+					},
+					{
+						src: 'https://marvelapp.com/2gjb7b1/screen/27891023',
+						type: 'iframe' // this overrides default type
+					}
+				],
+				gallery: {
+					enabled: true
+				},
+				type: 'image',
+				callbacks: {
+					open: function() {
+						var mfp = $.magnificPopup.instance;
+						var proto = $.magnificPopup.proto;
+
+						popup_open = true;
+
+						// default hide the left one
+						$('.mfp-arrow-left').hide();
+
+						// extend function that moves to next item
+						mfp.next = function() {
+							$('.mfp-arrow-right').show();
+							$('.mfp-arrow-left').show();
+
+							// if index is not last, call parent method
+							if(mfp.index < mfp.items.length - 1) {
+								proto.next.call(mfp);
+								 $('.mfp-arrow-right').show();
+							} else {
+								 // otherwise do whatever you want, e.g. hide "next" arrow
+								 $('.mfp-arrow-right').hide();
+							}
+						};
+
+						// same with prev method
+						mfp.prev = function() {
+							$('.mfp-arrow-right').show();
+							$('.mfp-arrow-left').show();
+							if(mfp.index > 0) {
+								proto.prev.call(mfp);
+								$('.mfp-arrow-left').show();
+							}
+							else {
+								$('.mfp-arrow-left').hide();
+							}
+						};
+
+					},
+					close: function() {
+						popup_open = false;
+					}
+				}
+			});
+
+			$('.zoom-gallery-7').magnificPopup({
+				items: [
+					{
+						src: 'assets/images/high-res/s7_1.jpeg'
+					},
+					{
+						src: 'http://flowcreative.co.nf/index.html',
+						type: 'iframe' // this overrides default type
+					}
+				],
+				gallery: {
+					enabled: true
+				},
+				type: 'image',
+				callbacks: {
+					open: function() {
+						var mfp = $.magnificPopup.instance;
+						var proto = $.magnificPopup.proto;
+
+						popup_open = true;
+
+						// default hide the left one
+						$('.mfp-arrow-left').hide();
+
+						// extend function that moves to next item
+						mfp.next = function() {
+							$('.mfp-arrow-right').show();
+							$('.mfp-arrow-left').show();
+
+							// if index is not last, call parent method
+							if(mfp.index < mfp.items.length - 1) {
+								proto.next.call(mfp);
+								 $('.mfp-arrow-right').show();
+							} else {
+								 // otherwise do whatever you want, e.g. hide "next" arrow
+								 $('.mfp-arrow-right').hide();
+							}
+						};
+
+						// same with prev method
+						mfp.prev = function() {
+							$('.mfp-arrow-right').show();
+							$('.mfp-arrow-left').show();
+							if(mfp.index > 0) {
+								proto.prev.call(mfp);
+								$('.mfp-arrow-left').show();
+							}
+							else {
+								$('.mfp-arrow-left').hide();
+							}
+						};
+
+					},
+					close: function() {
+						popup_open = false;
+					}
+				}
+			});
 		},
 
 		slider: function (elt) {
@@ -356,6 +562,7 @@ var isMobile;
 					}
 				});
 			}
+
 		}
 	};
 

@@ -187,6 +187,9 @@ header.main {
 }
 
 .content.main {
+	&.opa {
+		opacity: 0;
+	}
 	padding: 0;
 	margin: 0 auto;
 	color: #fff;
@@ -227,7 +230,7 @@ header.main {
 		position: relative;		
 	}
 
-	.zoom-gallery {
+	.slide-gallery {
 		text-align: center;
 		padding-top: 5vh;
 		max-width: 90%;
@@ -241,6 +244,24 @@ header.main {
 			// float: left;
 			width: 100%;
 			position: relative;
+
+			&.files {
+				a {
+					&:before {
+						content: "";
+						display: block;
+						background: url(../images/files.svg);
+						width: 15px;
+						height: 15px;
+						background-size: 15px 15px;
+						position: absolute;
+						top: 6px;
+						left: 6px;
+						opacity: 0.3;
+						transition: opacity 150ms ease;
+					}
+				}
+			}
 			a {
 				position: relative;
 				display: block;
@@ -502,8 +523,8 @@ header.main {
 
 // video
 .videoWrapper {
-	max-width: 90%;
-	margin-left: 5%;
+	max-width: 80%;
+	margin-left: 10%;
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
 	// padding-top: 25px;
@@ -521,5 +542,52 @@ header.main {
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+
+// pw
+aside {	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	z-index: 2000;
+	.container {
+		display: table;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+	.container_center {
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+		height: 100%;
+
+		input {
+			border: 1px solid #fff;
+			padding: 5px;
+			color: white;
+			display: inline-block;
+			outline: none;
+		}
+		.error {
+			border: 1px solid red;
+		}
+		input[type="submit"] {
+			text-transform: uppercase;
+			font-size: 100%;
+			color: white;
+			cursor: pointer;
+			padding-left: 15px;
+			padding-right: 15px;
+			&:hover {
+				background-color: #fff;
+				color: #000;
+			}
+		}
 	}
 }
