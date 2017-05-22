@@ -168,19 +168,19 @@ var droga5 = "AbbeyRD1966";
 					
 					// //reaching our last section? The one with our normal site?
 					// if(nextIndex == 1){
-					// 	//fading out the to arrow
-					// 	$('.arrow-up').fadeOut();
+					//  //fading out the to arrow
+					//  $('.arrow-up').fadeOut();
 					// }
 					// else {
-					// 	$('.arrow-up').show();
+					//  $('.arrow-up').show();
 					// }
 
 					// //leaving our last section? The one with our normal site?
 					// if(index == $('.featuredProject').length-1){
-					// 	$('.arrow-down').hide();
+					//  $('.arrow-down').hide();
 					// }
 					// else {
-					// 	$('.arrow-down').show();
+					//  $('.arrow-down').show();
 					// }
 				},
 			});
@@ -211,14 +211,14 @@ var droga5 = "AbbeyRD1966";
 			});
 
 			// $('.arrow-down').on('click', function(e){
-			// 	e.preventDefault();
-			// 	e.stopPropagation();
-			// 	$.fn.pagepiling.moveSectionDown();
+			//  e.preventDefault();
+			//  e.stopPropagation();
+			//  $.fn.pagepiling.moveSectionDown();
 			// });
 			// $('.arrow-up').on('click', function(e){
-			// 	e.preventDefault();
-			// 	e.stopPropagation();
-			// 	$.fn.pagepiling.moveSectionUp();
+			//  e.preventDefault();
+			//  e.stopPropagation();
+			//  $.fn.pagepiling.moveSectionUp();
 			// });
 		},
 		/**
@@ -237,7 +237,7 @@ var droga5 = "AbbeyRD1966";
 					image: {
 						verticalFit: true,
 						// titleSrc: function(item) {
-						// 	return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+						//  return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
 						// }
 					},
 					gallery: {
@@ -305,9 +305,9 @@ var droga5 = "AbbeyRD1966";
 					{
 						src: 'assets/images/high-res/s6_1_1.jpg'
 					},
-                    {
-                        src: 'assets/images/high-res/s6_1_2.jpg'
-                    },
+					{
+						src: 'assets/images/high-res/s6_1_2.jpg'
+					},
 					{
 						src: 'assets/images/high-res/s6_1_3.jpg'
 					}
@@ -480,64 +480,64 @@ var droga5 = "AbbeyRD1966";
 			});
 
 
-            $('.zoom-gallery-7_2').magnificPopup({
-                items: [
-                    {
-                        src: 'assets/images/high-res/s7_2.jpeg'
-                    },
-                    {
-                        src: 'https://player.vimeo.com/video/218360675',
-                        type: 'iframe' // this overrides default type
-                    }
-                ],
-                gallery: {
-                    enabled: true
-                },
-                type: 'image',
-                callbacks: {
-                    open: function() {
-                        var mfp = $.magnificPopup.instance;
-                        var proto = $.magnificPopup.proto;
+			$('.zoom-gallery-7_2').magnificPopup({
+				items: [
+					{
+						src: 'assets/images/high-res/s7_2.jpeg'
+					},
+					{
+						src: 'https://player.vimeo.com/video/218360675',
+						type: 'iframe' // this overrides default type
+					}
+				],
+				gallery: {
+					enabled: true
+				},
+				type: 'image',
+				callbacks: {
+					open: function() {
+						var mfp = $.magnificPopup.instance;
+						var proto = $.magnificPopup.proto;
 
-                        popup_open = true;
+						popup_open = true;
 
-                        // default hide the left one
-                        $('.mfp-arrow-left').hide();
+						// default hide the left one
+						$('.mfp-arrow-left').hide();
 
-                        // extend function that moves to next item
-                        mfp.next = function() {
-                            $('.mfp-arrow-right').show();
-                            $('.mfp-arrow-left').show();
+						// extend function that moves to next item
+						mfp.next = function() {
+							$('.mfp-arrow-right').show();
+							$('.mfp-arrow-left').show();
 
-                            // if index is not last, call parent method
-                            if(mfp.index < mfp.items.length - 1) {
-                                proto.next.call(mfp);
-                                 $('.mfp-arrow-right').show();
-                            } else {
-                                 // otherwise do whatever you want, e.g. hide "next" arrow
-                                 $('.mfp-arrow-right').hide();
-                            }
-                        };
+							// if index is not last, call parent method
+							if(mfp.index < mfp.items.length - 1) {
+								proto.next.call(mfp);
+								 $('.mfp-arrow-right').show();
+							} else {
+								 // otherwise do whatever you want, e.g. hide "next" arrow
+								 $('.mfp-arrow-right').hide();
+							}
+						};
 
-                        // same with prev method
-                        mfp.prev = function() {
-                            $('.mfp-arrow-right').show();
-                            $('.mfp-arrow-left').show();
-                            if(mfp.index > 0) {
-                                proto.prev.call(mfp);
-                                $('.mfp-arrow-left').show();
-                            }
-                            else {
-                                $('.mfp-arrow-left').hide();
-                            }
-                        };
+						// same with prev method
+						mfp.prev = function() {
+							$('.mfp-arrow-right').show();
+							$('.mfp-arrow-left').show();
+							if(mfp.index > 0) {
+								proto.prev.call(mfp);
+								$('.mfp-arrow-left').show();
+							}
+							else {
+								$('.mfp-arrow-left').hide();
+							}
+						};
 
-                    },
-                    close: function() {
-                        popup_open = false;
-                    }
-                }
-            });
+					},
+					close: function() {
+						popup_open = false;
+					}
+				}
+			});
 		},
 
 		slider: function (elt) {
@@ -574,41 +574,10 @@ var droga5 = "AbbeyRD1966";
 								}
 							}
 						]
-						// 		breakpoint: 767,
-						// 		settings: {
-						// 			slidesToShow: 1,
-						// 			slidesToScroll: 1,
-						// 			arrows: false,
-						// 			dots: true,
-						// 			centerMode: true,
-						// 			centerPadding: '25%'
-						// 		}
-						// 	},
-						// 	{
-						// 		breakpoint: 500,
-						// 		settings: {
-						// 			slidesToShow: 1,
-						// 			slidesToScroll: 1,
-						// 			arrows: false,
-						// 			dots: true,
-						// 			centerMode: true,
-						// 			centerPadding: '15%'
-						// 		}
-						// 	},
-						// 	{
-						// 		breakpoint: 100,
-						// 		settings: {
-						// 			slidesToShow: 1,
-						// 			slidesToScroll: 1,
-						// 			arrows: false,
-						// 			dots: true,
-						// 			centerMode: true,
-						// 			centerPadding: '8%'
-						// 		}
-						// 	}
-						// 	// You can unslick at a given breakpoint now by adding:
-						// 	// settings: "unslick"
-						// 	// instead of a settings object
+						
+						//  // You can unslick at a given breakpoint now by adding:
+						//  // settings: "unslick"
+						//  // instead of a settings object
 						// ]
 					});
 				}
@@ -616,48 +585,47 @@ var droga5 = "AbbeyRD1966";
 				$(window).on('resize orientationchange', function() {
 
 					if($(window).width() < 767) {
-                        if(typeof $.fn.Slick !== 'undefined'){
-                            console.log('===  main.js [620] ===');
-                            $('.slider').each(function(){
-                                $(this).slick({
-                                    slidesToShow: 1,
-                                    slidesToScroll: 1,
-                                    slide: 'figure',
-                                    prevArrow: '<span class="slick-prev"><i class="icon-arrow-left"></i></span>',
-                                    nextArrow: '<span class="slick-next"><i class="icon-arrow-right"></i></span>',
-                                    mobileFirst: true,
-                                    arrows: true,
-                                    dots: true,
-                                    infinite: false,
-                                    // centerMode: true,
-                                    // centerPadding: '40px',
-                                    responsive: [
-                                        {
-                                            breakpoint: 767,
-                                            settings: "unslick"
-                                        },
-                                        {
-                                            breakpoint: 100,
-                                            settings: {
-                                                slidesToShow: 1,
-                                                slidesToScroll: 1,
-                                                arrows: false,
-                                                dots: true
-                                            }
-                                        }
-                                    ]
-                                });
-                            });
-                        }
-                        else {
-    						$('.slider').each(function(){
-    							$(this).slick('resize');
-    						});   
-                        }
+						if($('.slick-initialized').length > 0) {
+							$('.slider').each(function(){
+								$(this).slick('resize');
+							});   
+						}
+						else {
+							$('.slider').each(function(){
+								$(this).slick({
+									slidesToShow: 1,
+									slidesToScroll: 1,
+									slide: 'figure',
+									prevArrow: '<span class="slick-prev"><i class="icon-arrow-left"></i></span>',
+									nextArrow: '<span class="slick-next"><i class="icon-arrow-right"></i></span>',
+									mobileFirst: true,
+									arrows: true,
+									dots: true,
+									infinite: false,
+									// centerMode: true,
+									// centerPadding: '40px',
+									responsive: [
+										{
+											breakpoint: 767,
+											settings: "unslick"
+										},
+										{
+											breakpoint: 100,
+											settings: {
+												slidesToShow: 1,
+												slidesToScroll: 1,
+												arrows: false,
+												dots: true
+											}
+										}
+									]
+								});
+							});
+						}
 					}
-					else {
-						// $('.slider').slick('unslick');
-					}
+					// else {
+					// 	$('.slider').slick('unslick');
+					// }
 				});
 			}
 
