@@ -614,11 +614,46 @@ var droga5 = "AbbeyRD1966";
 				}
 
 				$(window).on('resize orientationchange', function() {
-					console.log('===  main.js [348] ===', $(window).width());
+
 					if($(window).width() < 767) {
-						$('.slider').each(function(){
-							$(this).slick('resize');
-						});
+                        if(typeof $.fn.Slick !== 'undefined'){
+                            console.log('===  main.js [620] ===');
+                            $('.slider').each(function(){
+                                $(this).slick({
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+                                    slide: 'figure',
+                                    prevArrow: '<span class="slick-prev"><i class="icon-arrow-left"></i></span>',
+                                    nextArrow: '<span class="slick-next"><i class="icon-arrow-right"></i></span>',
+                                    mobileFirst: true,
+                                    arrows: true,
+                                    dots: true,
+                                    infinite: false,
+                                    // centerMode: true,
+                                    // centerPadding: '40px',
+                                    responsive: [
+                                        {
+                                            breakpoint: 767,
+                                            settings: "unslick"
+                                        },
+                                        {
+                                            breakpoint: 100,
+                                            settings: {
+                                                slidesToShow: 1,
+                                                slidesToScroll: 1,
+                                                arrows: false,
+                                                dots: true
+                                            }
+                                        }
+                                    ]
+                                });
+                            });
+                        }
+                        else {
+    						$('.slider').each(function(){
+    							$(this).slick('resize');
+    						});   
+                        }
 					}
 					else {
 						// $('.slider').slick('unslick');
