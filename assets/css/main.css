@@ -329,7 +329,10 @@ header.main .logo { max-width: 70%; padding-left: 10%; height: auto; display: no
 @media only screen and (min-width: 767px) { .content.main .slide-gallery .x4 { width: 50%; } }
 .content.main .section { background-color: #000; height: 100%; width: 100%; }
 .content.main .section .title { padding: 0 40px; }
-.content.main .section .title img { -webkit-transition: all 150ms ease-in-out; transition: all 150ms ease-in-out; margin-bottom: 50px; }
+.content.main .section .title img { width: 100%; -webkit-transition: all 150ms ease-in-out; transition: all 150ms ease-in-out; }
+@media only screen and (min-width: 767px) { .content.main .section .title img { max-width: 450px; } }
+@media only screen and (min-width: 1200px) { .content.main .section .title img { max-width: 550px; } }
+@media only screen and (min-width: 1600px) { .content.main .section .title img { max-width: 779px; } }
 @media only screen and (min-width: 767px) { .content.main .section .title.intro img { max-width: 779px; } }
 @media only screen and (min-width: 1200px) { .content.main .section .title.intro img { max-width: 779px; } }
 @media only screen and (min-width: 1600px) { .content.main .section .title.intro img { max-width: 779px; } }

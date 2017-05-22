@@ -342,18 +342,18 @@ header.main {
 			// top: 50px;
 			// width: 100%;
 			img {
-				// width: 100%;
+				width: 100%;
 				transition: all 150ms ease-in-out;
-				// @include bp-tablet {
-				// 	max-width: 450px;
-				// }
-				// @include bp-desktop-large {
-				// 	max-width: 550px;
-				// }
-				// @include bp-desktop-xlarge {
-				// 	max-width: 779px;
-				// }
-				margin-bottom: 50px;
+				@include bp-tablet {
+					max-width: 450px;
+				}
+				@include bp-desktop-large {
+					max-width: 550px;
+				}
+				@include bp-desktop-xlarge {
+					max-width: 779px;
+				}
+				
 			}
 			&.intro {
 				img {
