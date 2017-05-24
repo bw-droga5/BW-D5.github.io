@@ -370,8 +370,11 @@ var droga5 = "AbbeyRD1966";
 					{
 						src: 'assets/images/high-res/s6_1_3.jpg'
 					},
+                    {
+                        src: 'assets/images/high-res/s6_4.jpg'
+                    },
 					{
-						src: 'assets/images/high-res/s6_4.jpg'
+						src: 'assets/images/high-res/s6_5.jpg'
 					}
 				],
 				gallery: {
