@@ -431,10 +431,15 @@ var droga5 = "AbbeyRD1966";
 					{
 						src: 'assets/images/high-res/s6_3.jpeg'
 					},
-					{
-						src: 'https://marvelapp.com/2gjb7b1/screen/27891023',
-						type: 'iframe' // this overrides default type
-					}
+                    {
+                        src: 'https://player.vimeo.com/video/218379470',
+                        type: 'iframe' // this overrides default type
+                    }
+     //                ,
+					// {
+					// 	src: 'https://marvelapp.com/2gjb7b1/screen/27891023',
+					// 	type: 'iframe' // this overrides default type
+					// }
 				],
 				gallery: {
 					enabled: true
