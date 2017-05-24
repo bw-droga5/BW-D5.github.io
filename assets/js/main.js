@@ -141,7 +141,7 @@ var droga5 = "AbbeyRD1966";
 			$('#content').pagepiling({
 				verticalCentered:false,
 				menu: '#projectMenu',
-				anchors: ['intro', 'step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'step10', 'video'],
+				anchors: ['intro', 'brief', 'step1', 'step2', 'step3', 'step4', 'step5', 'step6', 'step7', 'step8', 'step9', 'video', 'step10'],
 				navigation: false,
 				sectionSelector: '.section',
 				// sectionsColor: ['#f1f6ff', '#f6f6f6', '#fff', '#fff', '#f6f6f6', '#fff'],
@@ -151,7 +151,7 @@ var droga5 = "AbbeyRD1966";
 				keyboardScrolling: false,
 				navigation: {
 					'position': 'left',
-					'tooltips': ['Intro', 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6', 'Step 7', 'Step 8', 'Step 9', 'Step 10', 'video']
+					'tooltips': ['Intro', 'brief', 'Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6', 'Step 7', 'Step 8', 'Step 9', 'video', 'Step 10']
 				},
 				onLeave: function(index, nextIndex, direction){
 
@@ -361,6 +361,9 @@ var droga5 = "AbbeyRD1966";
 					{
 						src: 'assets/images/high-res/s6_1.jpeg'
 					},
+                    {
+                        src: 'assets/images/high-res/s6_2.jpeg'
+                    },
 					{
 						src: 'assets/images/high-res/s6_1_1.jpg'
 					},
