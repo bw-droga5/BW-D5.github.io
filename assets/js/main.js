@@ -297,7 +297,66 @@ var droga5 = "AbbeyRD1966";
 				});
 			});
 
-			$('.zoom-gallery-6-1').magnificPopup({
+			$('.zoom-gallery-5-1').magnificPopup({
+                items: [
+                    {
+                        src: 'assets/images/high-res/s5_1.jpg'
+                    },
+                    {
+                        src: 'assets/images/high-res/s5_2.jpg'
+                    }
+                ],
+                gallery: {
+                    enabled: true
+                },
+                type: 'image',
+                callbacks: {
+                    open: function() {
+                        var mfp = $.magnificPopup.instance;
+                        var proto = $.magnificPopup.proto;
+
+                        popup_open = true;
+
+                        // default hide the left one
+                        $('.mfp-arrow-left').hide();
+
+                        // extend function that moves to next item
+                        mfp.next = function() {
+                            $('.mfp-arrow-right').show();
+                            $('.mfp-arrow-left').show();
+
+                            // if index is not last, call parent method
+                            if(mfp.index < mfp.items.length - 1) {
+                                proto.next.call(mfp);
+                                 $('.mfp-arrow-right').show();
+                            } else {
+                                 // otherwise do whatever you want, e.g. hide "next" arrow
+                                 $('.mfp-arrow-right').hide();
+                            }
+                        };
+
+                        // same with prev method
+                        mfp.prev = function() {
+                            $('.mfp-arrow-right').show();
+                            $('.mfp-arrow-left').show();
+                            if(mfp.index > 0) {
+                                proto.prev.call(mfp);
+                                $('.mfp-arrow-left').show();
+                            }
+                            else {
+                                $('.mfp-arrow-left').hide();
+                            }
+                        };
+
+                    },
+                    close: function() {
+                        popup_open = false;
+                    }
+                }
+            });
+
+
+            $('.zoom-gallery-6-1').magnificPopup({
 				items: [
 					{
 						src: 'assets/images/high-res/s6_1.jpeg'
