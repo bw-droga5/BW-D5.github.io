@@ -493,7 +493,7 @@ var droga5 = "AbbeyRD1966";
 			$('.zoom-gallery-7').magnificPopup({
 				items: [
 					{
-						src: 'assets/images/high-res/s7_1.jpeg'
+						src: 'assets/images/high-res/s7_1.jpg'
 					},
 					{
 						src: 'flow.html',
