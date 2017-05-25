@@ -94,55 +94,55 @@ header.main {
 			padding: 0;
 			margin: 0;
 			@include bp-tablet {
-				height: 50px;
-				position: absolute;
-				&.s1 {
-					top: 0;
-					left: calc(50% - 81px);
-				}
-				&.s2 {
-					top: 60px;
-					left: calc(75% - 81px);
-				}
-				&.s3 {
-					top: 145px;
-					left: calc(90% - 81px);
-				}
-				&.s4 {
-					top: 240px;
-					left: calc(90% - 81px);
-				}
-				&.s5 {
-					top: 310px;
-					left: calc(75% - 81px);
-				}
-				&.s6 {
-					top: 370px;
-					left: calc(50% - 81px);
-				}
-				&.s7 {
-					top: 310px;
-					left: calc(25% - 81px);
-				}
-				&.s8 {
-					top: 240px;
-					left: calc(10% - 81px);
-				}
-				&.s9 {
-					top: 145px;
-					left: calc(10% - 81px);
-				}
-				&.s10 {
-					top: 60px;
-					left: calc(25% - 81px);
-				}
+				// height: 50px;
+				// position: absolute;
+				// &.s1 {
+				// 	top: 0;
+				// 	left: calc(50% - 81px);
+				// }
+				// &.s2 {
+				// 	top: 60px;
+				// 	left: calc(75% - 81px);
+				// }
+				// &.s3 {
+				// 	top: 145px;
+				// 	left: calc(90% - 81px);
+				// }
+				// &.s4 {
+				// 	top: 240px;
+				// 	left: calc(90% - 81px);
+				// }
+				// &.s5 {
+				// 	top: 310px;
+				// 	left: calc(75% - 81px);
+				// }
+				// &.s6 {
+				// 	top: 370px;
+				// 	left: calc(50% - 81px);
+				// }
+				// &.s7 {
+				// 	top: 310px;
+				// 	left: calc(25% - 81px);
+				// }
+				// &.s8 {
+				// 	top: 240px;
+				// 	left: calc(10% - 81px);
+				// }
+				// &.s9 {
+				// 	top: 145px;
+				// 	left: calc(10% - 81px);
+				// }
+				// &.s10 {
+				// 	top: 60px;
+				// 	left: calc(25% - 81px);
+				// }
 
-				&.active {
-					a {
-						background: url(../images/circle.png) no-repeat;
-						background-size: 100%;
-					}
-				}
+				// &.active {
+				// 	a {
+				// 		background: url(../images/circle.png) no-repeat;
+				// 		background-size: 100%;
+				// 	}
+				// }
 			}
 			&.active {
 				a {
