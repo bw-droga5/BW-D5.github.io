@@ -499,7 +499,7 @@ var droga5 = "AbbeyRD1966";
 						src: 'assets/images/high-res/s7_1.jpg'
 					},
 					{
-						src: 'flow.html',
+						src: 'https://vimeo.com/218959186',
 						type: 'iframe' // this overrides default type
 					}
 				],
