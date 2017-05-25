@@ -359,25 +359,25 @@ var droga5 = "AbbeyRD1966";
             $('.zoom-gallery-6-1').magnificPopup({
 				items: [
 					{
-						src: 'assets/images/high-res/s6_1.jpeg'
+						src: 'assets/images/high-res/s6_2.jpeg'
 					},
                     {
-                        src: 'assets/images/high-res/s6_2.jpeg'
-                    },
-					{
-						src: 'assets/images/high-res/s6_1_1.jpg'
-					},
-					{
-						src: 'assets/images/high-res/s6_1_2.jpg'
-					},
-					{
 						src: 'assets/images/high-res/s6_1_3.jpg'
-					},
+                    },
+                    {
+                        src: 'assets/images/high-res/s6_5.jpg'
+                    },
+                    {
+                        src: 'assets/images/high-res/s6_1_1.jpg'
+                    },
+                    {
+                        src: 'assets/images/high-res/s6_1_2.jpg'
+                    },
                     {
                         src: 'assets/images/high-res/s6_4.jpg'
                     },
-					{
-						src: 'assets/images/high-res/s6_5.jpg'
+                    {
+                        src: 'assets/images/high-res/s6_1.jpeg'
 					}
 				],
 				gallery: {
