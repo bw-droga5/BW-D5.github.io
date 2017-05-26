@@ -80,7 +80,7 @@ var droga5 = "AbbeyRD1966";
 			this.slideZoom();
 			this.toggleProjectNav();
 			this.slider();
-			// this.loginform();
+			this.loginform();
 
 
 			FastClick.attach(document.body);
